@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/date_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.owner.rover_viewer.DateSelect">
+
+    <EditText
+        android:id="@+id/yearInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/year"
+        android:maxLength="4"
+        android:singleLine="false" />
+
+    <EditText
+        android:id="@+id/solInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/dayInput"
+        android:layout_alignEnd="@+id/dayInput"
+        android:layout_marginBottom="83dp"
+        android:hint="@string/sol" />
+
+    <EditText
+        android:id="@+id/monthInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="40dp"
+        android:maxLength="2"
+        android:hint="@string/month"
+        android:layout_below="@+id/yearInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/dayInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="36dp"
+        android:maxLength="2"
+        android:hint="@string/day"
+        android:layout_below="@+id/monthInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/earthButton"
+        android:text="@string/date_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/dayInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="pickEarthDate" />
+
+    <Button
+        android:id="@+id/solButton"
+        android:text="@string/sol_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/earthButton"
+        android:layout_alignStart="@+id/earthButton"
+        android:onClick="pickSolDate" />
+
+</RelativeLayout>
